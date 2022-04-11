@@ -23,7 +23,7 @@ echo $filer;
 
 $message = "Спасибо" . $_POST["username"] . " " . $_POST["usersurname"] . "за отправку резюме. После рассмотрения мы с вами свяжемся \n Команда ArtRegion #U+1F609";
 $to = $_POST["email"];
-$from = "kakimarra@mail.ru";
+$from = "artregion@site.ru";
 
 $subject = "Спасибо за отправку!";
 
@@ -32,6 +32,8 @@ $subject = "=?utf-8?B?" .base64_encode($subject) . "?=";
 $headers = "From: $from\r\nReplay-to: $from\r\nContent-type:text/plain; charset=utf-8\r\n";
 
 mail($to, $subject, $message, $headers);
+
+imap_mail($to, $subject, $message, $headers);
 
 ?>
 <script>
