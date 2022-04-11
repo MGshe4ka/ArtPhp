@@ -23,7 +23,7 @@ echo $filer;
 
 $message = "Спасибо" . $_POST["username"] . " " . $_POST["usersurname"] . "за отправку резюме. После рассмотрения мы с вами свяжемся \n Команда ArtRegion #U+1F609";
 $to = $_POST["email"];
-$from = "kakimarrra@mail.ru";
+$from = "kakimarra@mail.ru";
 
 $subject = "Спасибо за отправку!";
 
